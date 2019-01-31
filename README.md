@@ -4,7 +4,9 @@
 
 效果如下
 
-![效果图.gif](https://github-1253441827.cos.ap-shanghai.myqcloud.com/qozuf-xx4io.gif)
+https://github-1253441827.cos.ap-shanghai.myqcloud.com/qozuf-xx4io.gif 
+
+ps 自己去看吧，，实在是放不上来了
 
 ### 小程序直接围观
 
