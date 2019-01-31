@@ -4,7 +4,7 @@
 
 效果如下
 
-![qozuf-xx4io.gif](https://upload-images.jianshu.io/upload_images/2046465-e0281a29c2fdf021.gif?imageMogr2/auto-orient/strip)
+![效果图.gif](https://upload-images.jianshu.io/upload_images/2046465-e0281a29c2fdf021.gif?imageMogr2/auto-orient/strip)
 
 ### 小程序直接围观
 
