@@ -1,0 +1,59 @@
+<view class="container" bindtap='blur'>
+  <view class='page' >
+   <zan-dialog id="zan-dialog-test"></zan-dialog>
+   
+    <!-- <view wx:for="{{allList}}" wx:key="{{item.id}}" class="applet-drag " style='transform: scale({{item.scale}});top:{{item.top}}px;left:{{item.left}}px; ' id="{{item.id}}" z-index="{{ item.zIndex }}"> -->
+    <view  wx:for="{{allList}}" wx:key="{{item.id}}" class="applet-drag " style=''>
+      <view  id="drag-{{item.id}}" z-index="{{ item.zIndex }}" class="applet-drag-wrap {{item.active ? 'active' : ''}}" style='top:{{item.top}}px;left:{{item.left}}px; transform: rotate({{item.angle}}deg);{{item.shape == "round" ? "border-radius:50%" : ""}}'>
+        <!-- 删除图 -->
+        <!-- <image wx:if="{{item.active}}" mode="aspectFill" style='transform: translate(-50%, -50%);transform-origin:center;' src="/pages/images/close.png" class="applet-drag-btn applet-drag-close"></image> -->
+
+        <!-- 拖拽图 -->
+        <image wx:if="{{item.active}}" data-id='{{item.id}}' mode="aspectFill" catchtouchstart='touchStart' catchtouchmove='touchMove' src="/pages/images/transform.png" class="applet-drag-btn applet-drag-expand-move">
+        </image>
+
+        <!-- 头顶旋转图 -->
+        <view class="rotate">
+          <image wx:if="{{item.active}}" data-id='{{item.id}}' mode="aspectFill" catchtouchstart='touchStart' catchtouchmove='touchRotate' src="/pages/images/rotate1.png" class="applet-drag-btn applet-drag-expand-rotate">
+          </image>
+          <view class='line'></view>
+        </view>
+
+        <view class="point">
+          <view class='point_lt'></view>
+          <view class='point_rt'></view>
+          <view class='point_lb'></view>
+          <view class='point_rb'></view>
+        </view>
+
+        <view class="applet-drag-content"  data-id='{{item.id}}' catchtouchstart="moveStart" catchtouchmove="onMove" style='width:{{item.width!= 0 ? item.width : "auto"}}px;height:{{item.height == 0 ? "auto" : item.height}}px;{{item.shape == "round" ? "border-radius:50%" : ""}}'>
+          <view wx:if="{{item.type == 'img'}}">
+            <image style='width:{{item.width!= 0 ? item.width : "auto"}}px;height:{{item.height == 0 ? "auto" : item.height}}px;' class='drag-content-image' src="{{item.image}}"></image>
+          </view>
+          <view wx:if="{{item.type == 'text'}}">
+            <text class='drag-text'>{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <dragMenuItem catch:eventTrigger="eventTrigger"></dragMenuItem>
+
+  <view class='footer' wx:if="{{ hasActive }}">
+    <view class='tab'>
+      <view class='li' style='width: 50%'>
+        修改
+      </view>
+      <view class='li del' catchtap='onDel' style='width: 50%'>
+        删除
+      </view>
+    </view>
+  </view>
+<view class='modal_canvas' wx:if="{{canvas_show}}">
+  <canvas canvas-id='showImage' style=''></canvas>  
+  <cover-view class='button'>
+    <button bindtap='closeCanvas'>查看更多</button>
+  </cover-view>
+</view>
+</view>

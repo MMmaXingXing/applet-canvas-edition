@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "dragMenuItem": "../components/drag_menu_circle/index",
+      "zan-dialog": "../components/dialog/dialog/index"
+  }
+}

@@ -1,0 +1,6 @@
+<!--点赞小心心  -->
+<view class="drag" bindtouchmove="touchMoveChange" style="left:{{drag_style.x}};top:{{drag_style.y}};">
+    <view>
+        <slot name="defalut"></slot>
+    </view>
+</view>

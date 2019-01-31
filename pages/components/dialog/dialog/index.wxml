@@ -1,0 +1,35 @@
+<pop-manager
+  show="{{ show }}"
+  type="center"
+>
+  <view class="zan-dialog--container">
+    <view
+      style="border-bottom:1px solid #eee;line-height:45rpx;"
+      wx:if="{{ title }}"
+      class="zan-dialog__header"
+    >{{ title }}</view>
+    <view wx:if="{{showImage}}" class="show_icon">
+      <image src="{{showImage}}" mode="aspectFill"></image>
+    </view>
+    <view
+      style='font-size:30rpx;padding:0;'
+      wx:if="{{ showMessage }}"
+      class="zan-dialog__header"
+    >{{ showMessage }}</view>
+    <view
+      class="zan-dialog__content {{ title ? 'zan-dialog__content--title' : '' }}"
+    >
+      <text>{{ message }}</text>
+    </view>
+    <view
+      class="zan-dialog__footer {{ buttonsShowVertical ? 'zan-dialog__footer--vertical' : 'zan-dialog__footer--horizon' }}"
+    >
+      <block
+        wx:for="{{ buttons }}"
+        wx:key="{{ item.text }}-{{ item.type }}"
+      >
+      <button bindgetuserinfo ="getUserInfo" bind:tap="handleButtonClick" open-type="getUserInfo" style="width:100%;color:green;">确认</button> 
+      </block>
+    </view>
+  </view>
+</pop-manager>

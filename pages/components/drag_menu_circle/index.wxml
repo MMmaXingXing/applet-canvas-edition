@@ -1,0 +1,9 @@
+<view class="drag" bindtouchmove="touchMoveChange" bindtap="touchStart"  style="left:{{drag_style.x}};top:{{drag_style.y}};">
+    <image src="/pages/images/template.png" class="img-style" animation="{{animTopOne}}" data-type="template" bindtap="triggrtEventClick"></image>
+    <image src="/pages/images/circle.png" class="img-style" animation="{{animInput}}" data-type="circle" bindtap="triggrtEventClick"></image>
+    <image src="/pages/images/square.png" class="img-style" animation="{{animTranspond}}" data-type="square" bindtap="triggrtEventClick"></image>
+    <image src="/pages/images/text1.png" class="img-style" animation="{{animCollect}}" data-type="text" bindtap="triggrtEventClick"></image>
+    <image src="/pages/images/save.png" class="img-style" animation="{{animTopFive}}" data-type="save" bindtap="triggrtEventClick"></image>
+    <!-- <image src="/pages/images/menu.png" class="img-plus-style" animation="{{animPlus}}"  data-type="save" bindtap="triggrtEventClick" ></image> -->
+    <image src="/pages/images/menu.png" class="img-plus-style" animation="{{animPlus}}"  bindtap="plus"></image>
+  </view>

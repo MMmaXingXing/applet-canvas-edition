@@ -1,0 +1,68 @@
+.img-plus-style {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+  z-index: 100;
+}
+
+.img-style {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+}
+
+.drag {
+  position: absolute;
+  z-index: 1000;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+/* 第二级菜单样式 */
+.sec_menu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec_menu .pop{
+  font-size: 20rpx;
+  color: #fff;
+  min-width: 120rpx;
+  text-align: center;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10rpx;
+  margin-left: 30rpx;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec_menu .pop:nth-of-type(1){
+   /* margin-left: 0rpx; */
+     /* left:150rpx;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+
+.sec_menu .pop:nth-of-type(1){
+  /* left:120rpx;
+  top: 50%;
+  transform: translateY(-50%); */
+}
